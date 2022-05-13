@@ -1,0 +1,104 @@
+Server Config
+The config file can be found in the "serverconfig" folder in the "world" folder and is named "discordintegration-server.toml".
+- active
+  Should the Discord integration be active?
+  Default: false
+- bot_token
+  Token of your Discord bot
+  Default: INSERT BOT TOKEN HERE
+- channel_id
+  Channel ID where the bot will be working
+  Default: 0
+  Available values: 0 or greater
+- command_prefix
+  Command prefix for Discord commands
+  Default: !
+- max_char_count
+  How long should Discord messages send to Minecraft Chat be at most?
+  If the value is -1, there is no limit to the length.
+  Default: -1
+  Available values: -1 to 2000
+- messages
+  Messages shown on Discord
+  - server_started
+    Options for the server start message
+    - enabled
+      Should a message be sent to the Discord chat, if the server started?
+      Default: true
+    - message
+      Message send to the Discord chat, if the Minecraft server started.
+      Default: Server started
+  - server_stopped
+    Options for the server stop message
+    - enabled
+      Should a message be sent to the Discord chat, if the server stopped?
+      Default: true
+    - message
+      Message send to the Discord chat, if the Minecraft server stopped.
+      Default: Server stopped
+  - server_crashed
+    Options for the server crash message
+    - enabled
+      Should a message be sent to the Discord chat, if the server crashed?
+      Default: true
+    - message
+      Message send to the Discord chat, if the Minecraft server crashed.
+      Default: Server crashed
+  - player_joined
+    Options for the player joined message
+    - enabled
+      Should a message be sent to the Discord chat, if a player joined?
+      Default: true
+    - message
+      Message send to the Discord chat, if a player joined. (<player name> <message>)
+      Default: joined the game.
+  - player_left
+    Options for the player left message
+    - enabled
+      Should a message be sent to the Discord chat, if a player left?
+      Default: true
+    - message
+      Message send to the Discord chat, if a player left the server. (<player name> <message>)
+      Default: disconnected.
+  - player_died
+    Options for the player died message
+    - enabled
+      Should a message be sent to the Discord chat, if a player died?
+      Default: true
+    - message
+      Message send to the Discord chat, if a player died. (<player name> <message>) If left empty, the default Minecraft message is send.
+  - tamed_mob_died
+    Options for the tamed mob died message
+    - enabled
+      Should a message be sent to the Discord chat, if a tamed mob left?
+      Default: true
+    - message
+      Message send to the Discord chat, if a tamed mob died. (<player name> <message>) If left empty, the default Minecraft message is send.
+  - player_got_advancement
+    Options for the player got advancement message
+    - enabled
+      Should a message be sent to the Discord chat, if a player got an advancement?
+      Default: true
+    - message
+      Message send to the Discord chat, if a player got an advancement. (<player name> <message>) --<advancement title>--<new line>-<advancement description>-
+      Default: has made the advancement
+- other_bots
+  Options how to deal with other bots
+  - transmit_bot_messages
+    Should messages of other bots be sent to the Minecraft chat?
+    Default: false
+- other_bots_command_prefixes
+  Command prefixes of other bots.
+  Messages with these prefixes are not sent to the Minecraft chat.
+- commands
+  Command mapping from Discord to Minecraft commands
+  - discord_command
+    Discord command without prefix
+  - minecraft_command
+    Minecraft command without prefix ('/')
+  - use_parameters
+    Should everything attached to the Discord command, be attached to the Minecraft command, too?
+  - enabled
+    Should the command be active?
+  - description
+    Description for the help command
