@@ -1,0 +1,16 @@
+How to set up a Discord bot and get the bot token
+First you have to log into the Discord Developers Site.
+Press "New Application" and enter a name for your application.
+Go to the "Bot tab" and click "Add Bot".
+Discord Developer Page: Bot TabClick onto "Click to Reveal Token" to get the bot token for the config.
+To add the bot to a server click on "General Information" and add the "Client ID" into the following link:
+https://discordapp.com/oauth2/authorize?client_id=YOUR_BOTS_CLIENT_ID&amp;scope=bot&amp;permissions=3072
+**You have to replace YOUR_BOTS_CLIENT_ID by the client ID of your bot.**
+Discord Developer Page: General Information TabOpen this link and add the bot to one of your server.
+You can only add the bot to your own servers. If you want to add the bot to a server, that you don't own, 
+you have to check the "Public Bot" option in the Bot tab and let the server owner add the bot to his/her Discord server.
+How to get the channel ID
+To get the channel ID you have to go in Discord into the "User Settings" > "Appearance" and have to activate the "Developer Mode"
+Discord Developer ModeNext you go to the server and channel in which the bot shall operate.
+Make a right click on this channel and click "Copy ID" and paste it into the config.
+Discord Channel Menu
